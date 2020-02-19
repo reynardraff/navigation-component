@@ -97,3 +97,32 @@
 .btn-gray:hover {
   opacity: 0.75;
 }
+
+.btn-green-outlined,
+.btn-green-outlined:hover,
+.btn-green-outlined:focus {
+  cursor: pointer;
+  height: 30px;
+  color: $turquoise-dark;
+  line-height: 30px;
+  border-radius: 4px;
+  padding: 1px 18px;
+  font-size: 13px;
+  background-color: transparent;
+  border: 1px solid $turquoise-dark;
+  border-radius: 15px;
+  @include Roboto-Bold;
+}
+
+.btn-green-outlined:hover {
+  background: $turquoise-dark;
+  color: white;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.font-bold {
+  font-weight: bold !important;
+}

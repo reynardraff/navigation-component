@@ -11,7 +11,7 @@
   height: auto;
   position: absolute;
   right: 10px;
-  top: 40px;
+  top: 45px;
   display: none;
   z-index: 100;
   cursor: default;
@@ -30,7 +30,7 @@
     background-color: $turquoise-dark;
     border-radius: 10px 10px 0 0;
     padding: 10px 20px 10px;
-    height: 30px;
+    height: 50px;
     position: sticky;
     top: 0;
     display: flex;
@@ -39,14 +39,13 @@
     .notification-back-btn {
       @include mobile-only;
     }
-    .left-noti {
-      background: url(#{$img-path}/icon-bell.svg) left center no-repeat;
-      background-size: 16px;
-      padding-left: 26px;
-      color: $white;
-      font-size: 16px;
-      @include Roboto-Bold;
-      text-align: left;
+    .noti-title {
+      display: flex;
+      align-items: center;
+
+      .noti-title-text {
+        margin-left: 8px;
+      }
     }
     .rights {
       @include hide-mobile;
@@ -79,7 +78,7 @@
   }
   .noti-body {
     max-height: 378px;
-    overflow: scroll;
+    overflow: auto;
     &.center {
       text-align: center;
     }
@@ -92,8 +91,9 @@
     }
     .titles {
       color: $gray-90;
-      font-size: 30px;
+      font-size: 24px;
       @include Barlow-Condensed-SemiBold;
+      text-transform: uppercase;
       line-height: 40px;
       margin: 23px 0 -8px 0;
     }
@@ -281,7 +281,6 @@
     height: 40px;
     display: flex;
     align-items: center;
-    color: $gray-50;
     font-size: 12px;
     @include Roboto-Regular;
     line-height: 40px;
@@ -289,6 +288,11 @@
     position: relative;
     z-index: 10;
     margin-top: -3px;
+
+    & .view-noti {
+      text-decoration: underline;
+      color: blue;
+    }
   }
 }
 

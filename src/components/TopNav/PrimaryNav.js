@@ -5,6 +5,7 @@ import ResizeDetector from 'react-resize-detector'
 import ChosenArrow from '../ChosenArrow'
 import IconArrowSmalldown from '../../assets/images/arrow-small-down.svg'
 import MagnifyingGlass from '../../assets/images/magnifying_glass.svg'
+import NotificationButton from './../NotificationButton'
 import styles from './PrimaryNav.module.scss'
 import { config } from 'topcoder-react-utils'
 

@@ -4,6 +4,7 @@ import cn from 'classnames'
 import _ from 'lodash'
 import moment from 'moment'
 import styles from './styles.module.scss'
+import IconBell from '../../assets/images/icon-bell.svg'
 
 const LightBar = ({ title, onDismiss }) => (
   <div className={styles['light-bar']}>
@@ -80,11 +81,10 @@ const NotificationList = ({ notifications, onDismiss, onSettings, onClose }) => 
   return (
     <>
       <div className={styles['noti-header']}>
-        <span
-          className={styles['notification-back-btn']}
-          role='button'
-          onClick={onClose}
-        />
+        <div className={styles['noti-title']}>
+          <IconBell />
+          <span className={styles['noti-title-text']}>Notifications</span>
+        </div>
         <span className={styles['left-noti']}>Notifications</span>
         <div className={styles.rights}>
           <span
@@ -93,6 +93,7 @@ const NotificationList = ({ notifications, onDismiss, onSettings, onClose }) => 
             onClick={() => onDismiss(notifications)}
           >
             Dismiss All
+            Mark All as Read
           </span>
           &nbsp;<span className={styles.point} />&nbsp;
           <span
@@ -146,7 +147,7 @@ const NotificationList = ({ notifications, onDismiss, onSettings, onClose }) => 
           </Fragment>
         ))}
         <div className={cn(styles['end-message'], styles.center)}>
-          You have no more notifications
+          <a href='#' className={cn(styles['view-noti'])}>View All Notifications</a>
         </div>
       </div>
     </>

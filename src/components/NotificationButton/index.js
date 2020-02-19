@@ -5,12 +5,12 @@ import IconBell from '../../assets/images/icon-bell.svg'
 import styles from './styles.module.scss'
 
 const NotificationButton = ({ className, state, onClick, notificationsPopupOpen }) => (
-  <div
+  <button
     className={cn(styles.notificationButton, styles[state], notificationsPopupOpen && styles.isNotificationsPopupOpen, className)}
     onClick={onClick}
   >
     <IconBell />
-  </div>
+  </button>
 )
 
 NotificationButton.propTypes = {

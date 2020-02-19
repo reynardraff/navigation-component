@@ -2,28 +2,24 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cn from 'classnames'
 import styles from './styles.module.scss'
+import IconBell from '../../assets/images/icon-bell.svg'
+import BellBig from './../../assets/images/bell-big.svg'
 
 const EmptyNotifications = ({ onClose, emptyTitle, emptyText }) => (
   <>
     <div className={styles['noti-header']}>
-      <span
-        className={styles['notification-back-btn']}
-        role='button'
-        onClick={onClose}
-      />
-      <span className={styles['left-noti']}>Notifications</span>
-      <div className={styles.rights}>
-        <span className={styles['white-link']} role='button'>Settings</span>
+      <div className={styles['noti-title']}>
+        <IconBell />
+        <span className={styles['noti-title-text']}>Notifications</span>
       </div>
-      <span className={styles['btn-setting']} role='button' />
     </div>
     <div className={cn(styles['noti-body'], styles.center)}>
-      <i className={cn(styles.icons, styles['icon-bell'])} />
+      <BellBig className={cn(styles.icons, styles['icon-bell'])} />
       <h4 className={styles.titles}>{emptyTitle}</h4>
       <div className={cn(styles.txt, styles['center-txt'])}>{emptyText}</div>
     </div>
     <div className={styles['noti-footer']}>
-      <span className={cn(styles.btn, styles['btn-blue'])} role='button'>
+      <span className={cn(styles.btn, styles['btn-green-outlined'], styles['text-uppercase'])} role='button'>
         Notification Settings
       </span>
     </div>
